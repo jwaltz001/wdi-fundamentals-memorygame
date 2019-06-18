@@ -19,6 +19,12 @@ h2 {
 	font-size: 20px;
 	text-transform: uppercase;
 }
+h3, h5 {
+	letter-spacing: 1px;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
 p {
 	font-family: "Droid Serif", serif;
 	line-height: 26px;
@@ -63,8 +69,23 @@ footer {
 	letter-spacing: .08em;
 	font-weight: 500;
 }
-.interesting-text {
-	color: #007f7f;
+#interesting-text {
+	margin-top: 75px;
+	border-top: 2px solid;
+ }
+#reset {
+	margin-top: 25px;
+	padding: 10px;
+	font-family: raleway;
+	color: #F15B31;
+	letter-spacing: 1px;
+	font-weight: 800;
+	font-size: 15px;
+	background: #0D2C40;
+	border: 5px solid transparent;
+}
+#reset:hover {
+	border-color: #F15B31;
 }
 .copyright {
 	font-family: "Raleway", sans-serif;
@@ -86,8 +107,14 @@ footer {
 	color: #F15B31;
 	font-weight: 700;
 }
-#personal-link {
+.personal-message {
 	color: #FFFFFF;
-	margin: 10px;
+	padding: 40px 0;
 	clear: both;
+	text-transform: none;
+}
+#personal-link {
+	height: 27px; 
+	width: 31.75px;
+	margin: 0;
 }

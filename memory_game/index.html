@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Not sure about this
     <meta charset="UTF-8">
-  -->
     <title>Memory Card Game</title>
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -14,32 +12,32 @@
     </header>
     <nav>
       <a href="#instuctions">Instructions</a>
-      <a href="#game">Game</a>
+      <a href="#game-board">Game</a>
     </nav>
     <main>
       <div id="instuctions">
         <h2>Instructions</h2>
         <p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.</p>
       </div>
-      <div id="game">
-        <img src="images/back.png" alt="Queen of Diamonds">
-        <img src="images/back.png" alt="Queen of Hearts">
-        <img src="images/back.png" alt="King of Diamonds">
-        <img src="images/back.png" alt="King of Hearts">
+      <p id="scoreBox">| Wins: <span id="score-wins">0</span> | Losses: <span id="score-losses">0</span> |</p>
+      <div id="game-board" class="board clearfix"></div>
+      <button id="reset">Reset</button>
+      <div id="interesting-text">
+        <h2> Build Memory, Build Yourself</h2>
+        <p>Memory can be improved by exercising it. What we remember (and how accurately we remember it) helps our ideas to take root and form us into the person we want to be by remembering information, what works, and what does not work. <br>You might as well have fun while you becoming better.</p>
       </div>
-      <h2 class="interesting-text">Build Memory, Build Yourself</h2>
-      <p>Memory can be improved by exercising it. What we remember (and how accurately we remember it) helps our ideas to take root and form us into the person we want to be by remembering information, what works, and what does not work. <br>You might as well have fun while you becoming better.</p>
+      
     </main>
     <footer class="clearfix">
-      <p class="copyright">Copyright 2017<p>
+      <p class="copyright">Copyright 2017</p>
       <p class="message">Created with &hearts; by <span class="name">GA</span></p>
-<!--need to figure out how to work in
-      <div id="personal-link">
+
+      <div class="personal-message">
         <h3>Meet the mind behind the game</h3>
-        <h5>Well the guy who followed instuctions.</h5>
-        <a href="#">LinkedIn</a>
+        <h5>...Well the guy who followed instuctions.</h5>
+        <a href="https://www.linkedin.com/in/justin-waltz"  target="_blank"><img id="personal-link" src="images/LI-In-Bug.png" alt="LinkedIn logo" title="Developer's LinkedIn"></a>
       </div>
--->
+
     </footer>
   <script src="js/main.js"></script>
   </body>

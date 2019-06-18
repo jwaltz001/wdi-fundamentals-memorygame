@@ -20,29 +20,53 @@ var cards = [
 	cardImage: "images/king-of-diamonds.png"
 	}
 ];
-var cardsInPlay = [];
 
+var cardsInPlay = [];
+var x = 0;
 function checkForMatch () {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		/*console.log*/alert("You found a match!");
+		addWin();
 		} else {
 		/*console.log*/alert("Sorry, try again.");
+		addLoss();
 		}
 }
 
-function flipCard(cardId) {
+function addWin () {
+	document.getElementById('score-wins').innerHTML = x += 1;
+}
+function addLoss () {
+	document.getElementById('score-losses').innerHTML = x += 1;
+}
+	
+function flipCard () {
+	cardId = this.getAttribute('data-id')
 	console.log("User flipped " + cards[cardId].rank);
 	cardsInPlay.push(cards[cardId].rank);
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
+	this.setAttribute('src', cards[cardId].cardImage)
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
 	} 
 };
 
-flipCard(0);
-/*console.log(cards[0].cardImage);
-console.log(cards[0].suit);*/
-flipCard(2);
-/*console.log(cards[2].cardImage);
-console.log(cards[2].suit);*/
+function createBoard () {
+	for(i = 0; i < cards.length; i++) {
+		var cardElement = document.createElement('img');
+		cardElement.setAttribute('src', 'images/back.png');
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(cardElement);
+	}
+}
+
+function resetBoard () {
+	for(i = 0; i < cards.length; i++) {
+		document.getElementsByTagName('img')[i].setAttribute('src', 'images/back.png');
+	}
+	cardsInPlay.length = 0;
+}
+document.getElementById('reset').addEventListener('click', resetBoard);
+createBoard();
